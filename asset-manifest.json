@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/study-web-app/static/css/main.8fcd8083.css",
+    "main.js": "/study-web-app/static/js/main.3ff6bc96.js",
+    "index.html": "/study-web-app/index.html",
+    "main.8fcd8083.css.map": "/study-web-app/static/css/main.8fcd8083.css.map",
+    "main.3ff6bc96.js.map": "/study-web-app/static/js/main.3ff6bc96.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fcd8083.css",
+    "static/js/main.3ff6bc96.js"
+  ]
+}
