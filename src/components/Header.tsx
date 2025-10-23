@@ -61,16 +61,26 @@ const Header: React.FC = () => {
               <Link to="/courses?category=design" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>디자인</Link>
             </div>
           </div>
+          
+          {/* 모바일 전용 버튼들 */}
+          <div className="mobile-menu-actions">
+            <Link to="/mypage" className="mobile-mypage-btn" onClick={() => setIsMenuOpen(false)}>
+              <span className="btn-icon">👤</span>
+              마이페이지
+            </Link>
+            <button className="mobile-login-btn" onClick={() => setIsMenuOpen(false)}>로그인</button>
+            <button className="mobile-signup-btn" onClick={() => setIsMenuOpen(false)}>무료 회원가입</button>
+          </div>
         </nav>
         
         <div className="header-actions">
           <SearchBox />
-          <Link to="/mypage" className="mypage-btn">
+          <Link to="/mypage" className="mypage-btn desktop-only">
             <span className="btn-icon">👤</span>
             마이페이지
           </Link>
-          <button className="login-btn">로그인</button>
-          <button className="signup-btn">무료 회원가입</button>
+          <button className="login-btn desktop-only">로그인</button>
+          <button className="signup-btn desktop-only">무료 회원가입</button>
           <button 
             className="mobile-menu-btn"
             onClick={() => setIsMenuOpen(!isMenuOpen)}

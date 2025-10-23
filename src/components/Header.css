@@ -162,6 +162,67 @@
     transition: all 0.3s ease;
   }
   
+  /* 모바일 메뉴 액션들 */
+  .mobile-menu-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  .mobile-mypage-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1rem;
+    background: #f8f9fa;
+    color: #2c3e50;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-mypage-btn:hover {
+    background: #667eea;
+    color: white;
+  }
+  
+  .mobile-login-btn {
+    padding: 0.8rem 1rem;
+    background: transparent;
+    color: #2c3e50;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-login-btn:hover {
+    background: #f8f9fa;
+    border-color: #667eea;
+    color: #667eea;
+  }
+  
+  .mobile-signup-btn {
+    padding: 0.8rem 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-signup-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  }
+  
   .mobile-menu-btn:hover {
     background: #f8f9fa;
     color: #667eea;
@@ -307,6 +368,17 @@
 }
 
 /* 기존 검색바 스타일 제거됨 - SearchBox 컴포넌트에서 처리 */
+
+/* 데스크톱 전용 요소들 */
+.desktop-only {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
 
 .mypage-btn {
   display: flex;
