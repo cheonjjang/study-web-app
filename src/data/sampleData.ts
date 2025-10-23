@@ -137,7 +137,7 @@ export const courses: Course[] = [
     rating: 4.7,
     reviews: 89,
     createdAt: "2024-01-20",
-    hasEbook: false,
-    ebookPrice: null
+    hasEbook: true,
+    ebookPrice: 59000
   }
 ];

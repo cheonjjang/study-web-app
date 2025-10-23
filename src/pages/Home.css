@@ -72,6 +72,93 @@
   50% { background-position: 100% 50%; }
 }
 
+/* 히어로 섹션 모바일 최적화 */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 2rem 0;
+  }
+  
+  .hero .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+  }
+  
+  /* 모바일에서 도형 크기 조정 */
+  .shape-1 {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 5%;
+  }
+  
+  .shape-2 {
+    width: 100px;
+    height: 100px;
+    top: 70%;
+    right: 10%;
+  }
+  
+  .shape-3 {
+    width: 60px;
+    height: 60px;
+    top: 30%;
+    right: 20%;
+  }
+  
+  .shape-4 {
+    width: 90px;
+    height: 90px;
+    bottom: 10%;
+    left: 10%;
+  }
+}
+
 /* Scroll to Top Button */
 .scroll-to-top {
   position: fixed;
@@ -343,29 +430,281 @@
 }
 
 /* Featured Courses */
-.featured-courses {
+/* 새로운 인기 강의 섹션 */
+.featured-courses-new {
   padding: 5rem 0;
   background: white;
 }
 
-.course-grid {
+.courses-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 2rem;
 }
 
-.course-card {
+/* 새로운 카드 스타일 */
+.course-card-new {
   background: white;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.course-card-new:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 카드 이미지 */
+.card-image {
   position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-card-new:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.discount-label {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #ff4757;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.live-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff0000;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+/* 카드 내용 */
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.category-badge {
+  display: inline-block;
+  background: #f8f9fa;
+  color: #667eea;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  width: fit-content;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.instructor-info {
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-description {
+  color: #6c757d;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+  min-height: 60px;
+}
+
+.course-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.level-tag, .duration-tag, .students-count {
+  background: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #495057;
+  font-weight: 500;
+}
+
+.rating-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.star-rating {
+  font-size: 0.9rem;
+}
+
+.rating-text {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+/* 가격 정보 */
+.pricing-info {
+  margin-bottom: 1rem;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
   border: 1px solid #e9ecef;
-  min-height: 500px;
+  flex-shrink: 0;
+}
+
+.price-section {
+  margin-bottom: 8px;
+}
+
+.price-current {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.price-original {
+  font-size: 0.9rem;
+  color: #adb5bd;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+
+.free-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #28a745;
+}
+
+.ebook-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+
+/* 버튼 그룹 */
+.button-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.btn-detail, .btn-live, .btn-ebook {
+  flex: 1;
+  min-width: 100px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-detail {
+  background: white;
+  color: #667eea;
+  border: 1px solid #667eea;
+}
+
+.btn-detail:hover {
+  background: #667eea;
+  color: white;
+}
+
+.btn-live {
+  background: #667eea;
+  color: white;
+  border: 1px solid #667eea;
+}
+
+.btn-live:hover {
+  background: #5a67d8;
+}
+
+.btn-ebook {
+  background: #6c757d;
+  color: white;
+  border: 1px solid #6c757d;
+}
+
+.btn-ebook:hover {
+  background: #5a6268;
+}
+
+/* 비활성화된 버튼 스타일 */
+.btn-disabled {
+  background: #e9ecef !important;
+  color: #adb5bd !important;
+  border-color: #e9ecef !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.btn-disabled:hover {
+  background: #e9ecef !important;
+  color: #adb5bd !important;
+  border-color: #e9ecef !important;
 }
 
 .course-card:hover {
@@ -423,7 +762,7 @@
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex-grow: 1;
 }
 
 .course-category {
@@ -513,6 +852,7 @@
   background: #f8f9fa;
   border-radius: 8px;
   border: 1px solid #e9ecef;
+  flex-shrink: 0;
 }
 
 .course-price {
@@ -565,14 +905,15 @@
   margin-top: auto;
   padding-top: 1rem;
   border-top: 1px solid #e9ecef;
+  flex-shrink: 0;
 }
 
 .course-actions .btn {
   flex: 1;
-  min-width: 140px;
+  min-width: 120px;
   text-align: center;
-  padding: 0.7rem 1.2rem;
-  font-size: 0.85rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   border-radius: 6px;
   text-decoration: none;
@@ -612,54 +953,434 @@
   border-color: #5a6268;
 }
 
-/* 반응형 디자인 */
+/* 새로운 반응형 디자인 */
 @media (max-width: 1200px) {
-  .course-grid {
+  .courses-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .course-grid {
+  /* 인기 강의 섹션 모바일 최적화 */
+  .featured-courses-new {
+    padding: 3rem 0;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .view-all-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .courses-wrapper {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 0 1rem;
   }
-  
-  .course-card {
-    min-height: auto;
-  }
-  
-  .course-content {
+
+  .card-content {
     padding: 1.2rem;
   }
-  
-  .course-actions {
+
+  .button-group {
     flex-direction: column;
   }
-  
-  .course-actions .btn {
+
+  .btn-detail, .btn-live, .btn-ebook {
     min-width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .btn-detail:last-child, .btn-live:last-child, .btn-ebook:last-child {
+    margin-bottom: 0;
+  }
+  
+  /* 카드 이미지 모바일 최적화 */
+  .card-image {
+    height: 180px;
+  }
+  
+  /* 카드 내용 모바일 최적화 */
+  .card-title {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  
+  .instructor-info {
+    font-size: 0.8rem;
+  }
+  
+  .card-description {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+    min-height: 40px;
+  }
+  
+  .course-meta {
+    gap: 6px;
     margin-bottom: 0.5rem;
   }
   
-  .course-actions .btn:last-child {
-    margin-bottom: 0;
+  .level-tag, .duration-tag, .students-count {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+  
+  .rating-info {
+    margin-bottom: 0.75rem;
+  }
+  
+  .star-rating {
+    font-size: 0.8rem;
+  }
+  
+  .rating-text {
+    font-size: 0.75rem;
+  }
+  
+  /* 가격 정보 모바일 최적화 */
+  .pricing-info {
+    padding: 10px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .price-current {
+    font-size: 1.1rem;
+  }
+  
+  .price-original {
+    font-size: 0.8rem;
+  }
+  
+  .free-label {
+    font-size: 1.1rem;
+  }
+  
+  .ebook-info {
+    font-size: 0.8rem;
+  }
+  
+  /* 특징 섹션 모바일 최적화 */
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .features .container {
+    padding: 0 1rem;
+  }
+  
+  .features-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .features-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .features-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  /* CTA 섹션 모바일 최적화 */
+  .cta {
+    padding: 3rem 0;
+  }
+  
+  .cta .container {
+    padding: 0 1rem;
+  }
+  
+  .cta-content {
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .cta-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* 스크롤 투 탑 버튼 모바일 최적화 */
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .course-grid {
-    padding: 0 0.5rem;
+  /* 매우 작은 화면 최적화 */
+  .header-container {
+    padding: 0.5rem 0.75rem;
+    height: 60px;
   }
   
-  .course-content {
+  .logo-icon {
+    font-size: 1.8rem;
+  }
+  
+  .logo-main {
+    font-size: 1.2rem;
+  }
+  
+  .logo-sub {
+    font-size: 0.65rem;
+  }
+  
+  .nav-link {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .btn-login, .btn-signup {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  /* 히어로 섹션 초소형 화면 최적화 */
+  .hero {
+    min-height: 70vh;
+    padding: 1.5rem 0;
+  }
+  
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-stats {
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stat-item {
+    padding: 1rem 0.75rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+  /* 인기 강의 초소형 화면 최적화 */
+  .featured-courses-new {
+    padding: 2rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .courses-wrapper {
+    padding: 0 0.75rem;
+    gap: 1rem;
+  }
+  
+  .card-content {
     padding: 1rem;
   }
   
-  .course-pricing {
-    padding: 0.6rem;
+  .card-image {
+    height: 160px;
+  }
+  
+  .card-title {
+    font-size: 0.95rem;
+  }
+  
+  .instructor-info {
+    font-size: 0.75rem;
+  }
+  
+  .card-description {
+    font-size: 0.75rem;
+    -webkit-line-clamp: 2;
+    min-height: 36px;
+  }
+  
+  .course-meta {
+    gap: 4px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .level-tag, .duration-tag, .students-count {
+    font-size: 0.65rem;
+    padding: 2px 4px;
+  }
+  
+  .rating-info {
+    margin-bottom: 0.5rem;
+  }
+  
+  .star-rating {
+    font-size: 0.75rem;
+  }
+  
+  .rating-text {
+    font-size: 0.7rem;
+  }
+  
+  .pricing-info {
+    padding: 8px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .price-current {
+    font-size: 1rem;
+  }
+  
+  .price-original {
+    font-size: 0.75rem;
+  }
+  
+  .free-label {
+    font-size: 1rem;
+  }
+  
+  .ebook-info {
+    font-size: 0.75rem;
+  }
+  
+  .btn-detail, .btn-live, .btn-ebook {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+  
+  /* 특징 섹션 초소형 화면 최적화 */
+  .features {
+    padding: 2rem 0;
+  }
+  
+  .features-title {
+    font-size: 1.5rem;
+  }
+  
+  .features-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .feature-card {
+    padding: 1.2rem;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .feature-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-description {
+    font-size: 0.85rem;
+  }
+  
+  /* CTA 섹션 초소형 화면 최적화 */
+  .cta {
+    padding: 2rem 0;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .cta-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  /* 스크롤 투 탑 버튼 초소형 화면 최적화 */
+  .scroll-to-top {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
   }
 }
 

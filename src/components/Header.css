@@ -19,6 +19,55 @@
   height: 80px;
 }
 
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.75rem 1rem;
+    height: 70px;
+  }
+  
+  .logo-icon {
+    font-size: 2rem;
+  }
+  
+  .logo-main {
+    font-size: 1.4rem;
+  }
+  
+  .logo-sub {
+    font-size: 0.7rem;
+  }
+  
+  /* 네비게이션 모바일 최적화 */
+  .nav {
+    gap: 0.25rem;
+  }
+  
+  .nav-link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .nav-icon {
+    font-size: 1rem;
+  }
+  
+  /* 검색바 모바일 최적화 */
+  .search-container {
+    display: none; /* 모바일에서는 검색바 숨김 */
+  }
+  
+  /* 액션 버튼 모바일 최적화 */
+  .header-actions {
+    gap: 0.5rem;
+  }
+  
+  .btn-login, .btn-signup {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;

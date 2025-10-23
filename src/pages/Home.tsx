@@ -94,8 +94,8 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Courses */}
-      <section className="featured-courses">
+      {/* Featured Courses - New Clean Structure */}
+      <section className="featured-courses-new">
         <div className="container">
           <div className="section-header scroll-animate" ref={coursesHeaderRef}>
             <h2 className="section-title">🔥 인기 강의</h2>
@@ -105,55 +105,54 @@ const Home: React.FC = () => {
               <span className="arrow">→</span>
             </Link>
           </div>
-          <div className="course-grid">
+          <div className="courses-wrapper">
             {featuredCourses.map((course, index) => (
               <div 
                 key={course.id} 
-                className="course-card scroll-animate" 
+                className="course-card-new scroll-animate" 
                 ref={index === 0 ? course1Ref : index === 1 ? course2Ref : course3Ref}
               >
-                <div className="course-thumbnail">
+                <div className="card-image">
                   <img src={course.thumbnail} alt={course.title} />
                   {course.discount && (
-                    <div className="discount-badge">
+                    <div className="discount-label">
                       {course.discount}% 할인
                     </div>
                   )}
                   {course.isLive && (
-                    <div className="live-badge">
+                    <div className="live-label">
                       <div className="live-dot"></div>
                       LIVE
                     </div>
                   )}
                 </div>
-                <div className="course-content">
-                  <div className="course-category">{course.category}</div>
-                  <h3 className="course-title">{course.title}</h3>
-                  <p className="course-instructor">
+                <div className="card-content">
+                  <div className="category-badge">{course.category}</div>
+                  <h3 className="card-title">{course.title}</h3>
+                  <div className="instructor-info">
                     <span className="instructor-icon">👨‍🏫</span>
                     {course.instructorId === 1 ? '최성혜' : '김개발'} 강사
-                  </p>
-                  <p className="course-description">{course.description}</p>
-                  <div className="course-meta">
-                    <span className="course-level">{course.level}</span>
-                    <span className="course-duration">{course.duration}</span>
-                    <span className="course-students">{course.enrolledStudents}명 수강</span>
                   </div>
-                  <div className="course-rating">
-                    <span className="stars">⭐⭐⭐⭐⭐</span>
+                  <p className="card-description">{course.description}</p>
+                  <div className="course-meta">
+                    <span className="level-tag">{course.level}</span>
+                    <span className="duration-tag">{course.duration}</span>
+                    <span className="students-count">{course.enrolledStudents}명 수강</span>
+                  </div>
+                  <div className="rating-info">
+                    <span className="star-rating">⭐⭐⭐⭐⭐</span>
                     <span className="rating-text">{course.rating} ({course.reviews}개 리뷰)</span>
                   </div>
                   
-                  {/* 가격 섹션 통일 */}
-                  <div className="course-pricing">
-                    <div className="course-price">
+                  <div className="pricing-info">
+                    <div className="price-section">
                       {course.price === 0 ? (
-                        <span className="free">무료</span>
+                        <span className="free-label">무료</span>
                       ) : (
                         <>
-                          <span className="current-price">₩{course.price.toLocaleString()}</span>
+                          <span className="price-current">₩{course.price.toLocaleString()}</span>
                           {course.originalPrice && (
-                            <span className="original-price">₩{course.originalPrice.toLocaleString()}</span>
+                            <span className="price-original">₩{course.originalPrice.toLocaleString()}</span>
                           )}
                         </>
                       )}
@@ -161,26 +160,27 @@ const Home: React.FC = () => {
                     {course.hasEbook && (
                       <div className="ebook-info">
                         <span className="ebook-icon">📚</span>
-                        <span className="ebook-text">전자책 ₩{course.ebookPrice?.toLocaleString()}</span>
+                        <span className="ebook-price">전자책 ₩{course.ebookPrice?.toLocaleString()}</span>
                       </div>
                     )}
                   </div>
                   
-                  {/* 버튼 섹션 통일 */}
-                  <div className="course-actions">
-                    <Link to={`/course/${course.id}`} className="btn btn-outline">
+                  <div className="button-group">
+                    <Link to={`/course/${course.id}`} className="btn-detail">
                       자세히 보기
                     </Link>
-                    {course.isLive && (
-                      <Link to={`/live/${course.id}`} className="btn btn-primary">
-                        실시간 강의
-                      </Link>
-                    )}
-                    {course.hasEbook && (
-                      <Link to={`/ebook/${course.id}`} className="btn btn-secondary">
-                        전자책 구매
-                      </Link>
-                    )}
+                    <Link 
+                      to={course.isLive ? `/live/${course.id}` : '#'} 
+                      className={`btn-live ${!course.isLive ? 'btn-disabled' : ''}`}
+                    >
+                      실시간 강의
+                    </Link>
+                    <Link 
+                      to={course.hasEbook ? `/ebook/${course.id}` : '#'} 
+                      className={`btn-ebook ${!course.hasEbook ? 'btn-disabled' : ''}`}
+                    >
+                      전자책 구매
+                    </Link>
                   </div>
                 </div>
               </div>
