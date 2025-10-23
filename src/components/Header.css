@@ -136,8 +136,22 @@
     flex-wrap: wrap;
   }
   
+  /* 모바일에서는 SearchBox도 숨김 */
+  .search-container {
+    display: none;
+  }
+  
+  /* 모바일에서는 모든 액션 버튼 숨김, 햄버거만 표시 */
+  .header-actions > * {
+    display: none;
+  }
+  
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  
   .mypage-btn {
-    display: flex; /* 모바일에서도 마이페이지 버튼 표시 */
+    display: none; /* 모바일에서는 마이페이지 버튼 숨김 */
     padding: 0.4rem 0.7rem;
     font-size: 0.75rem;
     min-height: 36px;
