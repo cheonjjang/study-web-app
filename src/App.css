@@ -13,6 +13,8 @@ body {
   background-color: #fafbfc;
   color: #2c3e50;
   line-height: 1.6;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+  width: 100%;
 }
 
 .App {
