@@ -2,11 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { courses } from '../data/sampleData';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { useCounterAnimation } from '../hooks/useCounterAnimation';
 import './Home.css';
 
 const Home: React.FC = () => {
   const featuredCourses = courses.slice(0, 3);
   const [showScrollTop, setShowScrollTop] = useState(false);
+  
+  // 카운팅 애니메이션 훅들
+  const studentsCounter = useCounterAnimation({ end: 1250, suffix: '+', duration: 2000 });
+  const coursesCounter = useCounterAnimation({ end: 50, suffix: '+', duration: 1500 });
+  const ratingCounter = useCounterAnimation({ end: 4.9, decimals: 1, duration: 1800 });
   
   // 각 섹션에 대한 ref 생성
   const heroRef = useScrollAnimation();
@@ -67,16 +73,16 @@ const Home: React.FC = () => {
               마케팅, 프로그래밍, 뷰티 등 다양한 분야의 고품질 강의를 만나보세요.
             </p>
             <div className="hero-stats">
-              <div className="stat-item">
-                <div className="stat-number">1,250+</div>
+              <div className="stat-item" ref={studentsCounter.ref}>
+                <div className="stat-number">{studentsCounter.count}</div>
                 <div className="stat-label">수강생</div>
               </div>
-              <div className="stat-item">
-                <div className="stat-number">50+</div>
+              <div className="stat-item" ref={coursesCounter.ref}>
+                <div className="stat-number">{coursesCounter.count}</div>
                 <div className="stat-label">강의</div>
               </div>
-              <div className="stat-item">
-                <div className="stat-number">4.9</div>
+              <div className="stat-item" ref={ratingCounter.ref}>
+                <div className="stat-number">{ratingCounter.count}</div>
                 <div className="stat-label">평점</div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SearchBox from './SearchBox';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -45,10 +46,11 @@ const Header: React.FC = () => {
         </nav>
         
         <div className="header-actions">
-          <div className="search-box">
-            <input type="text" placeholder="강의 검색..." className="search-input" />
-            <button className="search-btn">🔍</button>
-          </div>
+          <SearchBox />
+          <Link to="/mypage" className="mypage-btn">
+            <span className="btn-icon">👤</span>
+            마이페이지
+          </Link>
           <button className="login-btn">로그인</button>
           <button className="signup-btn">무료 회원가입</button>
           <button 

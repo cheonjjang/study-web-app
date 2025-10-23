@@ -9,6 +9,7 @@ import LiveLecture from './pages/LiveLecture';
 import Payment from './pages/Payment';
 import EbookDetail from './pages/EbookDetail';
 import EbookPayment from './pages/EbookPayment';
+import MyPage from './pages/MyPage';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/payment/:courseId" element={<Payment />} />
           <Route path="/ebook/:id" element={<EbookDetail />} />
           <Route path="/ebook-payment/:id" element={<EbookPayment />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </div>
     </Router>
