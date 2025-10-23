@@ -1,13 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SearchBox from './SearchBox';
 import './Header.css';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  // 외부 클릭 시 메뉴 닫기
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <div className="header-container">
         <Link to="/" className="logo">
           <div className="logo-icon">🎓</div>
@@ -37,10 +55,10 @@ const Header: React.FC = () => {
               <span className="dropdown-arrow">▼</span>
             </span>
             <div className="dropdown-menu">
-              <Link to="/courses?category=marketing" className="dropdown-item">마케팅</Link>
-              <Link to="/courses?category=programming" className="dropdown-item">프로그래밍</Link>
-              <Link to="/courses?category=beauty" className="dropdown-item">뷰티</Link>
-              <Link to="/courses?category=design" className="dropdown-item">디자인</Link>
+              <Link to="/courses?category=marketing" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>마케팅</Link>
+              <Link to="/courses?category=programming" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>프로그래밍</Link>
+              <Link to="/courses?category=beauty" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>뷰티</Link>
+              <Link to="/courses?category=design" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>디자인</Link>
             </div>
           </div>
         </nav>

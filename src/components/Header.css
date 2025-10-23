@@ -133,7 +133,7 @@
   .header-actions {
     gap: 0.5rem;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
   
   .mypage-btn {
