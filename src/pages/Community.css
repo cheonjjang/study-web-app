@@ -1,0 +1,559 @@
+.community {
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.community-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.community-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 0.5rem;
+}
+
+.community-header p {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.community-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.tab {
+  padding: 1rem 2rem;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6c757d;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #667eea;
+}
+
+.tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.community-content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+.posts-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.posts-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0;
+}
+
+.btn-new-post {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-new-post:hover {
+  transform: translateY(-2px);
+}
+
+.posts-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.post-item {
+  display: flex;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f8f9fa;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.post-item:hover {
+  background: #f8f9fa;
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  min-width: 100px;
+}
+
+.category-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.solved-badge {
+  padding: 0.2rem 0.6rem;
+  background: #28a745;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.post-main {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.post-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.post-preview {
+  color: #6c757d;
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.avatar {
+  font-size: 1.2rem;
+}
+
+.author-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+.course-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.post-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 80px;
+  text-align: right;
+}
+
+.post-stats span {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quick-stats, .popular-courses {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+}
+
+.quick-stats h3, .popular-courses h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 1rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat-number {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 0.3rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-item {
+  display: flex;
+  gap: 0.8rem;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.course-item:hover {
+  background: #e9ecef;
+}
+
+.course-item img {
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.course-info h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 0.3rem 0;
+  line-height: 1.3;
+}
+
+.course-stats {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+/* 게시글 상세 페이지 */
+.post-detail {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.back-btn {
+  background: #f8f9fa;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #495057;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #e9ecef;
+}
+
+.post-header {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.post-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.post-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #212529;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+}
+
+.post-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.post-stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.post-content {
+  padding: 0 1.5rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.post-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+}
+
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.btn-like, .btn-share {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-like:hover, .btn-share:hover {
+  background: #e9ecef;
+}
+
+.comments-section {
+  padding: 1.5rem;
+}
+
+.comments-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 1rem 0;
+}
+
+.comment-form {
+  margin-bottom: 2rem;
+}
+
+.comment-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  resize: vertical;
+  margin-bottom: 0.8rem;
+}
+
+.comment-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.btn-comment {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-comment:hover {
+  transform: translateY(-2px);
+}
+
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.comment {
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.comment.instructor {
+  background: #e3f2fd;
+  border-left: 4px solid #1976d2;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.instructor-badge {
+  background: #1976d2;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.comment-date {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.comment-content p {
+  margin: 0 0 0.8rem 0;
+  line-height: 1.5;
+  color: #495057;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-reply {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-reply:hover {
+  text-decoration: underline;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+  .community-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    order: -1;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .post-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .post-category {
+    flex-direction: row;
+    margin-right: 0;
+    min-width: auto;
+  }
+  
+  .post-main {
+    margin-right: 0;
+  }
+  
+  .post-stats {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+  
+  .post-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .community-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .post-header h1 {
+    font-size: 1.4rem;
+  }
+  
+  .comment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

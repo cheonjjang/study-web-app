@@ -44,6 +44,14 @@ const Header: React.FC = () => {
             <span className="nav-icon">📚</span>
             강의 목록
           </Link>
+          <Link to="/community" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <span className="nav-icon">💬</span>
+            커뮤니티
+          </Link>
+          <Link to="/recommendations" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            <span className="nav-icon">🎯</span>
+            추천 강의
+          </Link>
           <Link to="/instructor/1" className="nav-link" onClick={() => setIsMenuOpen(false)}>
             <span className="nav-icon">👨‍🏫</span>
             강사 소개

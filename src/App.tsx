@@ -6,6 +6,8 @@ import CourseList from './pages/CourseList';
 import CourseDetail from './pages/CourseDetail';
 import CoursePlayer from './pages/CoursePlayer';
 import InstructorProfile from './pages/InstructorProfile';
+import Community from './pages/Community';
+import Recommendations from './pages/Recommendations';
 import LiveLecture from './pages/LiveLecture';
 import Payment from './pages/Payment';
 import EbookDetail from './pages/EbookDetail';
@@ -24,6 +26,8 @@ function App() {
           <Route path="/course/:id" element={<CourseDetail />} />
           <Route path="/player/:id" element={<CoursePlayer />} />
           <Route path="/instructor/:id" element={<InstructorProfile />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/recommendations" element={<Recommendations />} />
           <Route path="/live/:courseId" element={<LiveLecture />} />
           <Route path="/payment/:courseId" element={<Payment />} />
           <Route path="/ebook/:id" element={<EbookDetail />} />
