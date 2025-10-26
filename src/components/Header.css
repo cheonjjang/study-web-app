@@ -264,6 +264,7 @@
   white-space: nowrap;
   justify-content: center;
   min-height: 44px;
+  line-height: 1;
 }
 
 .mypage-btn:hover {
@@ -278,25 +279,22 @@
   font-size: 1rem;
 }
 
-.login-btn, .signup-btn {
-  padding: 0.6rem 1.2rem;
-  border: none;
+.login-btn {
+  padding: 0.6rem 1rem;
+  border: 2px solid #e0e0e0;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   min-height: 44px;
-}
-
-.login-btn {
+  line-height: 1;
   background: transparent;
   color: #2c3e50;
-  border: 2px solid #e0e0e0;
 }
 
 .login-btn:hover {
@@ -310,18 +308,19 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  padding: 0.6rem 1.2rem;
+  padding: 0.6rem 1rem;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   min-height: 44px;
-  line-height: 1.2;
+  line-height: 1;
+  max-width: 120px;
 }
 
 .signup-btn:hover {
