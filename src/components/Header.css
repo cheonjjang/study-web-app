@@ -188,12 +188,12 @@
   position: relative;
 }
 
-.dropdown-trigger:hover {
+.nav-dropdown:hover .dropdown-trigger {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
 }
 
-.dropdown-trigger:hover .dropdown-arrow {
+.nav-dropdown:hover .dropdown-arrow {
   color: white;
 }
 
@@ -217,9 +217,9 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   padding: 0.5rem 0;
   min-width: 160px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
   transition: all 0.3s ease;
   z-index: 9999;
   border: 2px solid #667eea;
