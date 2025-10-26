@@ -63,12 +63,12 @@ const InstructorProfile: React.FC = () => {
         <div className="instructor-header">
           <div className="instructor-info">
             <div className="instructor-avatar">
-              <img src={instructor.avatar} alt={instructor.name} />
+              <img src={instructor.profileImage} alt={instructor.name} />
             </div>
             <div className="instructor-details">
               <h1>{instructor.name}</h1>
               <p className="instructor-title">{instructor.title}</p>
-              <p className="instructor-bio">{instructor.bio}</p>
+              <p className="instructor-bio">{instructor.description}</p>
               
               <div className="instructor-stats">
                 <div className="stat-item">
@@ -84,7 +84,7 @@ const InstructorProfile: React.FC = () => {
                   <span className="stat-label">평균 평점</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">{instructor.experience}</span>
+                  <span className="stat-number">{instructor.career.length}</span>
                   <span className="stat-label">경력</span>
                 </div>
               </div>
@@ -92,7 +92,7 @@ const InstructorProfile: React.FC = () => {
               <div className="instructor-skills">
                 <h3>전문 분야</h3>
                 <div className="skills-list">
-                  {instructor.skills.map((skill, index) => (
+                  {instructor.specialties.map((skill, index) => (
                     <span key={index} className="skill-tag">{skill}</span>
                   ))}
                 </div>
@@ -189,10 +189,10 @@ const InstructorProfile: React.FC = () => {
               <div className="about-content">
                 <div className="about-card">
                   <h3>강사 소개</h3>
-                  <p>{instructor.bio}</p>
+                  <p>{instructor.description}</p>
                   <p>
-                    {instructor.name} 강사님은 {instructor.experience}년간의 풍부한 실무 경험을 바탕으로 
-                    실용적이고 체계적인 강의를 제공합니다. 특히 {instructor.skills.join(', ')} 분야에서 
+                    {instructor.name} 강사님은 {instructor.career.length}년간의 풍부한 실무 경험을 바탕으로 
+                    실용적이고 체계적인 강의를 제공합니다. 특히 {instructor.specialties.join(', ')} 분야에서 
                     전문성을 인정받고 있으며, 많은 수강생들이 실제 업무에 바로 적용할 수 있는 
                     고품질의 교육 콘텐츠를 제공하고 있습니다.
                   </p>
@@ -201,8 +201,8 @@ const InstructorProfile: React.FC = () => {
                 <div className="about-card">
                   <h3>경력 및 자격</h3>
                   <ul className="career-list">
-                    <li>🏢 {instructor.experience}년간 IT 업계 실무 경험</li>
-                    <li>🎓 컴퓨터공학 학사 및 석사 학위</li>
+                    <li>🏢 {instructor.career.length}년간 실무 경험</li>
+                    <li>🎓 {instructor.education}</li>
                     <li>🏆 다수의 기술 자격증 보유</li>
                     <li>📚 저서: "실무에 바로 쓰는 프론트엔드 개발"</li>
                     <li>🎤 국내외 기술 컨퍼런스 발표 다수</li>
