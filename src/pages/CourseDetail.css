@@ -176,6 +176,27 @@
   box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
 }
 
+.course-actions .btn-secondary {
+  background: #6c757d;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
+}
+
+.course-actions .btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+}
+
+.course-actions .btn-success {
+  background: #28a745;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+  cursor: default;
+}
+
 .course-content {
   display: grid;
   grid-template-columns: 2fr 1fr;

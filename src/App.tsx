@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Home from './pages/Home';
 import CourseList from './pages/CourseList';
 import CourseDetail from './pages/CourseDetail';
+import CoursePlayer from './pages/CoursePlayer';
 import InstructorProfile from './pages/InstructorProfile';
 import LiveLecture from './pages/LiveLecture';
 import Payment from './pages/Payment';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<CourseList />} />
           <Route path="/course/:id" element={<CourseDetail />} />
+          <Route path="/player/:id" element={<CoursePlayer />} />
           <Route path="/instructor/:id" element={<InstructorProfile />} />
           <Route path="/live/:courseId" element={<LiveLecture />} />
           <Route path="/payment/:courseId" element={<Payment />} />

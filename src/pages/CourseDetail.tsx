@@ -66,19 +66,22 @@ const CourseDetail: React.FC = () => {
             </div>
             
             <div className="course-actions">
+              <Link to={`/player/${course.id}`} className="btn btn-primary">
+                🎬 강의 시청하기
+              </Link>
               {course.isLive && (
-                <Link to={`/live/${course.id}`} className="btn btn-primary">
+                <Link to={`/live/${course.id}`} className="btn btn-secondary">
                   실시간 강의 참여
                 </Link>
               )}
               {course.price > 0 ? (
-                <Link to={`/payment/${course.id}`} className="btn btn-primary">
+                <Link to={`/payment/${course.id}`} className="btn btn-outline">
                   강의 구매하기
                 </Link>
               ) : (
-                <button className="btn btn-primary">
-                  무료 강의 시작하기
-                </button>
+                <span className="btn btn-success">
+                  무료 강의
+                </span>
               )}
               <Link to={`/instructor/${instructor.id}`} className="btn btn-outline">
                 강사 프로필 보기
