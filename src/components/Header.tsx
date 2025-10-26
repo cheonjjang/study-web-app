@@ -38,28 +38,35 @@ const Header: React.FC = () => {
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
             <span className="nav-icon">🏠</span>
-            홈
+            <span className="nav-text">홈</span>
           </Link>
           <Link to="/courses" className="nav-link" onClick={() => setIsMenuOpen(false)}>
             <span className="nav-icon">📚</span>
-            강의 목록
+            <span className="nav-text">강의</span>
           </Link>
           <Link to="/community" className="nav-link" onClick={() => setIsMenuOpen(false)}>
             <span className="nav-icon">💬</span>
-            커뮤니티
+            <span className="nav-text">커뮤니티</span>
           </Link>
           <Link to="/recommendations" className="nav-link" onClick={() => setIsMenuOpen(false)}>
             <span className="nav-icon">🎯</span>
-            추천 강의
-          </Link>
-          <Link to="/instructor/1" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-            <span className="nav-icon">👨‍🏫</span>
-            강사 소개
+            <span className="nav-text">추천</span>
           </Link>
           <div className="nav-dropdown">
             <span className="nav-link dropdown-trigger">
+              <span className="nav-icon">👨‍🏫</span>
+              <span className="nav-text">강사</span>
+              <span className="dropdown-arrow">▼</span>
+            </span>
+            <div className="dropdown-menu">
+              <Link to="/instructor/1" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>강사 프로필</Link>
+              <Link to="/instructor/2" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>강사 소개</Link>
+            </div>
+          </div>
+          <div className="nav-dropdown">
+            <span className="nav-link dropdown-trigger">
               <span className="nav-icon">📖</span>
-              카테고리
+              <span className="nav-text">카테고리</span>
               <span className="dropdown-arrow">▼</span>
             </span>
             <div className="dropdown-menu">
