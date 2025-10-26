@@ -267,21 +267,21 @@
 .mypage-btn {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 1rem;
+  gap: 0.3rem;
+  padding: 0.4rem 0.7rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   text-decoration: none;
   background: #f8f9fa;
   color: #2c3e50;
-  border: 2px solid #e0e0e0;
+  border: 1px solid #e0e0e0;
   white-space: nowrap;
   justify-content: center;
-  min-height: 44px;
+  min-height: 32px;
 }
 
 .mypage-btn:hover {
@@ -297,21 +297,20 @@
 }
 
 .login-btn {
-  padding: 0.6rem 1.2rem;
-  border: none;
-  border-radius: 10px;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #667eea;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  min-height: 44px;
+  min-height: 32px;
   background: transparent;
-  color: #2c3e50;
-  border: 2px solid #e0e0e0;
+  color: #667eea;
 }
 
 .login-btn:hover {
@@ -324,18 +323,19 @@
 .signup-btn {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
-  min-height: 44px;
+  min-height: 32px;
+  border: none;
 }
 
 .signup-btn:hover {
@@ -360,9 +360,6 @@
 }
 
 @media (max-width: 1024px) {
-  .search-container {
-    display: none;
-  }
   
   .header-actions {
     gap: 0.4rem;
@@ -438,8 +435,7 @@
   /* 모바일에서 액션 버튼들만 숨김 (햄버거 버튼은 제외) */
   .header-actions .mypage-btn,
   .header-actions .login-btn,
-  .header-actions .signup-btn,
-  .header-actions .search-container {
+  .header-actions .signup-btn {
     display: none !important;
   }
   

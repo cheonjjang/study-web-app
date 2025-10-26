@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import SearchBox from './SearchBox';
 import './Header.css';
 
 const Header: React.FC = () => {
@@ -81,13 +80,12 @@ const Header: React.FC = () => {
         </nav>
         
         <div className="header-actions">
-          <SearchBox />
           <Link to="/mypage" className="mypage-btn desktop-only">
             <span className="btn-icon">👤</span>
             마이페이지
           </Link>
           <button className="login-btn desktop-only">로그인</button>
-          <button className="signup-btn desktop-only">무료 회원가입</button>
+          <button className="signup-btn desktop-only">회원가입</button>
           <button 
             className="mobile-menu-btn"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
