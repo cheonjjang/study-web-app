@@ -165,7 +165,7 @@
   border-radius: 6px;
   transition: all 0.3s ease;
   position: relative;
-  font-size: 0.85rem;
+  font-size: 1rem;
   white-space: nowrap;
   flex-shrink: 0;
   min-width: 60px;
@@ -208,8 +208,6 @@
   min-width: 160px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
   z-index: 1000;
   border: 1px solid #e9ecef;
 }
@@ -217,7 +215,6 @@
 .nav-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
 }
 
 .dropdown-item {
@@ -225,7 +222,7 @@
   padding: 0.7rem 1.2rem;
   color: #495057;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   transition: all 0.3s ease;
   border-radius: 0;
@@ -236,8 +233,6 @@
 .dropdown-item:hover {
   background: #f8f9fa;
   color: #667eea;
-  transform: none;
-  border-left: 3px solid #667eea;
 }
 
 .dropdown-item:last-child {

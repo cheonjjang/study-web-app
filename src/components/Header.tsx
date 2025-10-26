@@ -41,7 +41,6 @@ const Header: React.FC = () => {
           <div className="nav-dropdown">
             <span className="nav-link dropdown-trigger">
               강의
-              <span className="dropdown-arrow">▼</span>
             </span>
             <div className="dropdown-menu">
               <Link to="/courses" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>전체 강의</Link>
@@ -60,7 +59,6 @@ const Header: React.FC = () => {
           <div className="nav-dropdown">
             <span className="nav-link dropdown-trigger">
               강사
-              <span className="dropdown-arrow">▼</span>
             </span>
             <div className="dropdown-menu">
               <Link to="/instructor/1" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>강사 프로필</Link>
