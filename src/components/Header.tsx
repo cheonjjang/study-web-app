@@ -62,7 +62,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           
-          {/* 모바일 전용 버튼들 */}
+          {/* 모바일 전용 버튼들 - 모바일에서만 표시 */}
           <div className="mobile-menu-actions">
             <Link to="/mypage" className="mobile-mypage-btn" onClick={() => setIsMenuOpen(false)}>
               <span className="btn-icon">👤</span>

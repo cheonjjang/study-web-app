@@ -19,6 +19,11 @@
   height: 80px;
 }
 
+/* PC에서 모바일 전용 버튼들 숨김 */
+.mobile-menu-actions {
+  display: none;
+}
+
 /* 모바일 최적화 - 로고 크기 조정 */
 @media (max-width: 768px) {
   .logo-icon {
@@ -33,7 +38,7 @@
     font-size: 0.7rem;
   }
   
-  /* 모바일 메뉴 액션들 */
+  /* 모바일에서만 모바일 메뉴 액션들 표시 */
   .mobile-menu-actions {
     display: flex;
     flex-direction: column;
