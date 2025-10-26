@@ -37,43 +37,35 @@ const Header: React.FC = () => {
         
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-            <span className="nav-icon">🏠</span>
-            <span className="nav-text">홈</span>
-          </Link>
-          <Link to="/courses" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-            <span className="nav-icon">📚</span>
-            <span className="nav-text">강의</span>
-          </Link>
-          <Link to="/community" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-            <span className="nav-icon">💬</span>
-            <span className="nav-text">커뮤니티</span>
-          </Link>
-          <Link to="/recommendations" className="nav-link" onClick={() => setIsMenuOpen(false)}>
-            <span className="nav-icon">🎯</span>
-            <span className="nav-text">추천</span>
+            홈
           </Link>
           <div className="nav-dropdown">
             <span className="nav-link dropdown-trigger">
-              <span className="nav-icon">👨‍🏫</span>
-              <span className="nav-text">강사</span>
+              강의
+              <span className="dropdown-arrow">▼</span>
+            </span>
+            <div className="dropdown-menu">
+              <Link to="/courses" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>전체 강의</Link>
+              <Link to="/courses?category=marketing" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>마케팅</Link>
+              <Link to="/courses?category=programming" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>프로그래밍</Link>
+              <Link to="/courses?category=beauty" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>뷰티</Link>
+              <Link to="/courses?category=design" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>디자인</Link>
+            </div>
+          </div>
+          <Link to="/community" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            커뮤니티
+          </Link>
+          <Link to="/recommendations" className="nav-link" onClick={() => setIsMenuOpen(false)}>
+            추천 강의
+          </Link>
+          <div className="nav-dropdown">
+            <span className="nav-link dropdown-trigger">
+              강사
               <span className="dropdown-arrow">▼</span>
             </span>
             <div className="dropdown-menu">
               <Link to="/instructor/1" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>강사 프로필</Link>
               <Link to="/instructor/2" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>강사 소개</Link>
-            </div>
-          </div>
-          <div className="nav-dropdown">
-            <span className="nav-link dropdown-trigger">
-              <span className="nav-icon">📖</span>
-              <span className="nav-text">카테고리</span>
-              <span className="dropdown-arrow">▼</span>
-            </span>
-            <div className="dropdown-menu">
-              <Link to="/courses?category=marketing" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>마케팅</Link>
-              <Link to="/courses?category=programming" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>프로그래밍</Link>
-              <Link to="/courses?category=beauty" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>뷰티</Link>
-              <Link to="/courses?category=design" className="dropdown-item" onClick={() => setIsMenuOpen(false)}>디자인</Link>
             </div>
           </div>
           
