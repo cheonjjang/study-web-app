@@ -185,12 +185,23 @@
 
 .dropdown-trigger {
   cursor: pointer;
+  position: relative;
+}
+
+.dropdown-trigger:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.dropdown-trigger:hover .dropdown-arrow {
+  color: white;
 }
 
 .dropdown-arrow {
   font-size: 0.6rem;
   margin-left: 0.3rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.2s ease;
+  color: #667eea;
 }
 
 .nav-dropdown:hover .dropdown-arrow {
@@ -208,6 +219,8 @@
   min-width: 160px;
   opacity: 0;
   visibility: hidden;
+  transform: translateY(-5px);
+  transition: all 0.2s ease;
   z-index: 1000;
   border: 1px solid #e9ecef;
 }
@@ -215,6 +228,7 @@
 .nav-dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 
 .dropdown-item {
