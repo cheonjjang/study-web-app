@@ -240,9 +240,10 @@
   display: flex;
 }
 
+/* 모바일에서 데스크톱 전용 요소들 숨김 */
 @media (max-width: 768px) {
   .desktop-only {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -256,7 +257,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-decoration: none;
   background: #f8f9fa;
   color: #2c3e50;
@@ -264,7 +265,6 @@
   white-space: nowrap;
   justify-content: center;
   min-height: 44px;
-  line-height: 1;
 }
 
 .mypage-btn:hover {
@@ -280,21 +280,21 @@
 }
 
 .login-btn {
-  padding: 0.6rem 1rem;
-  border: 2px solid #e0e0e0;
+  padding: 0.6rem 1.2rem;
+  border: none;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   min-height: 44px;
-  line-height: 1;
   background: transparent;
   color: #2c3e50;
+  border: 2px solid #e0e0e0;
 }
 
 .login-btn:hover {
@@ -308,19 +308,17 @@
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
   white-space: nowrap;
   min-height: 44px;
-  line-height: 1;
-  max-width: 120px;
 }
 
 .signup-btn:hover {
