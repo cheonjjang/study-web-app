@@ -210,19 +210,19 @@
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   left: 0;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   padding: 0.5rem 0;
   min-width: 160px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-5px);
-  transition: all 0.2s ease;
-  z-index: 1000;
-  border: 1px solid #e9ecef;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 9999;
+  border: 2px solid #667eea;
 }
 
 .nav-dropdown:hover .dropdown-menu {
@@ -233,15 +233,16 @@
 
 .dropdown-item {
   display: block;
-  padding: 0.7rem 1.2rem;
+  padding: 0.8rem 1.2rem;
   color: #495057;
   text-decoration: none;
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
   border-radius: 0;
   margin: 0;
   border-bottom: 1px solid #f8f9fa;
+  background: white;
 }
 
 .dropdown-item:hover {
