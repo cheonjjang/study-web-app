@@ -421,16 +421,16 @@
     display: block !important;
   }
   
-  /* 모바일에서 모든 액션 버튼 강제 숨김 */
-  .header-actions {
-    display: none !important;
-  }
-  
-  /* 개별 버튼들도 강제 숨김 */
+  /* 모바일에서 액션 버튼들만 숨김 (햄버거 버튼은 제외) */
   .mypage-btn,
   .login-btn,
   .signup-btn,
   .search-container {
     display: none !important;
+  }
+  
+  /* 햄버거 버튼은 모바일에서 보이도록 */
+  .mobile-menu-btn {
+    display: block !important;
   }
 }
