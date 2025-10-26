@@ -422,15 +422,15 @@
   }
   
   /* 모바일에서 액션 버튼들만 숨김 (햄버거 버튼은 제외) */
-  .mypage-btn,
-  .login-btn,
-  .signup-btn,
-  .search-container {
+  .header-actions .mypage-btn,
+  .header-actions .login-btn,
+  .header-actions .signup-btn,
+  .header-actions .search-container {
     display: none !important;
   }
   
   /* 햄버거 버튼은 모바일에서 보이도록 */
-  .mobile-menu-btn {
+  .header-actions .mobile-menu-btn {
     display: block !important;
   }
 }
