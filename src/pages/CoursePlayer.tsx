@@ -187,7 +187,7 @@ const CoursePlayer: React.FC<CoursePlayerProps> = () => {
             <h2>{course.title}</h2>
             <p className="course-description">{course.description}</p>
             <div className="course-stats">
-              <span>⭐ {course.rating} ({course.students}명 수강)</span>
+              <span>⭐ {course.rating} ({course.enrolledStudents}명 수강)</span>
               <span>📚 {course.level}</span>
               <span>⏱️ {course.duration}</span>
             </div>
